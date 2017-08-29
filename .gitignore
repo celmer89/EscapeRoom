@@ -1,0 +1,11 @@
+#/ue4
+*/Build
+*/Binaries
+*/DerivedDataCache
+*/Intermediate
+*/Saved
+BuildingEscape/Content/StarterContent/
+*_BuiltData.uasset
+
+#VS
+*.VC.db
