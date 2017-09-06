@@ -31,6 +31,9 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 private:
+
+	float GetTotalMassOfActorsOnPlate();
+
 	AActor* owner;
 
 	UPROPERTY(EditAnywhere)
@@ -38,8 +41,6 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	ATriggerVolume* pressurePlate;
-
-	AActor* actorThatOpens;
 	
 	UPROPERTY(EditAnywhere)
 	float doorClosedDelay = 1.f;
