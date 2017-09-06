@@ -34,6 +34,9 @@ private:
 
 	FHitResult GetFirstPhysicsBodyInReach() const;
 
+	FVector GetReachLineStart() const;
+	FVector GetReachLineEnd() const;
+
 	float reach = 200.f;
 	UPhysicsHandleComponent* physicsHandle = nullptr;
 	UInputComponent* inputComponent = nullptr;
