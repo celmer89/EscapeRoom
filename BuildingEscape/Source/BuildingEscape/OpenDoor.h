@@ -34,13 +34,13 @@ private:
 
 	float GetTotalMassOfActorsOnPlate();
 
-	AActor* owner;
+	AActor* owner = nullptr;
 
 	UPROPERTY(EditAnywhere)
 	float openAngle = -90;
 
 	UPROPERTY(EditAnywhere)
-	ATriggerVolume* pressurePlate;
+	ATriggerVolume* pressurePlate = nullptr;
 	
 	UPROPERTY(EditAnywhere)
 	float doorClosedDelay = 1.f;

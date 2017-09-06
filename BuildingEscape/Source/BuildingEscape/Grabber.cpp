@@ -49,6 +49,10 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	if (!physicsHandle) {
+		return;
+	}
+
 	if (physicsHandle->GrabbedComponent) {
 		// move the object that we are holding
 		physicsHandle->SetTargetLocation(GetReachLineEnd());
@@ -63,6 +67,11 @@ void UGrabber::Grab() {
 
 	// if we hit something then attach a physics handle
 	if (actorHit) {
+
+		if (!physicsHandle) {
+			return;
+		}
+
 		physicsHandle->GrabComponent(
 			componentToGrab,
 			NAME_None, //no bones needed
